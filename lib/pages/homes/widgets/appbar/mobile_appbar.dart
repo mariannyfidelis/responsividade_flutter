@@ -6,7 +6,7 @@ class MobileAppBar extends StatelessWidget{
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.black,
-      title: Text("Flutter text"),
+      title: Text("Appbar - Mobile"),
       centerTitle: true,
       actions: [
         IconButton(onPressed: () {}, icon: Icon(Icons.search)),

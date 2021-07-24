@@ -10,7 +10,7 @@ class WebAppBar extends StatelessWidget {
       toolbarHeight: 80,
       title: Row(
         children: [
-          Text("Flutter"),
+          Text("AppBar Web"),
           Expanded(child: Container()),
           const SizedBox(width: 32),
           IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
