@@ -1,6 +1,7 @@
 import 'package:app_responsividade_studio/pages/homes/widgets/appbar/mobile_appbar.dart';
 import 'package:app_responsividade_studio/pages/homes/widgets/appbar/web_appbar.dart';
 import 'package:flutter/material.dart';
+import 'package:app_responsividade_studio/breakpoints.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -20,13 +21,13 @@ class HomePage extends StatelessWidget {
             print("${constraints.smallest.toString()}");
           */
       return Scaffold(
-        appBar: constraints.maxWidth < 800
+        appBar: constraints.maxWidth < mobileBreakpoint
             ? PreferredSize(
                 child: MobileAppBar(),
                 preferredSize: Size(double.infinity, 56),
               )
             : PreferredSize(child: WebAppBar(), preferredSize: Size(double.infinity, 80)),
-        drawer: Drawer(),
+        drawer: constraints.maxWidth <= mobileBreakpoint ? Drawer(): null,
         body: Container(),
       );
     });

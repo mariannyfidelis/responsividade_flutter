@@ -1,3 +1,4 @@
+import 'package:app_responsividade_studio/pages/homes/widgets/appbar/web_appbar_responsive_content.dart';
 import 'package:flutter/material.dart';
 
 class WebAppBar extends StatelessWidget {
@@ -11,7 +12,8 @@ class WebAppBar extends StatelessWidget {
       title: Row(
         children: [
           Text("AppBar Web"),
-          Expanded(child: Container()),
+          SizedBox(width: 20),
+          WebAppBarResponsiveContent(),
           const SizedBox(width: 32),
           IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
           SizedBox(width: 20),
