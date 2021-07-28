@@ -19,6 +19,4 @@ class ContaService{
 
      return _listaContas;
   }
-
-
 }
