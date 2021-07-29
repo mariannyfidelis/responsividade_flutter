@@ -11,7 +11,7 @@ class ContaService{
     DBUtil.insertData("conta", c.toMap());
   }
 
-  Future<List> gelAllContas() async{
+  Future<List<Conta>> gelAllContas() async{
 
      final dataList = await DBUtil.getData("conta");
 

@@ -1,4 +1,5 @@
 import 'package:app_responsividade_studio/app_gastos/models/conta.dart';
+import 'package:app_responsividade_studio/app_gastos/screens/home_screen/home_screen.dart';
 import 'package:app_responsividade_studio/app_gastos/services/conta_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -50,8 +51,14 @@ class _CadastrarContaScreenState extends State<CadastrarContaScreen> {
                     width: double.infinity,
                     child: ElevatedButton(
                         onPressed: () {
-                          Conta c = Conta(titulo: _tituloController.text, saldo: double.parse(_saldoController.text));
+                          Conta c = Conta(
+                              titulo: _tituloController.text,
+                              saldo: double.parse(_saldoController.text));
                           _contaService.addConta(c);
+                          Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                  builder: (ctx) => HomeScreen()));
                           print(c);
                         },
                         child: Text("Cadastrar conta"),

@@ -15,8 +15,8 @@ class Conta {
     saldo = map['saldo'];
   }
 
-  @override
+  /*@override
   String toString() {
     return "Conta  [ Titulo:$titulo | Saldo:$saldo  ]";
-  }
+  }*/
 }
